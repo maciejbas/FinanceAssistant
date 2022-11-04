@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/incomeFragment">
+
+    <fragment
+        android:id="@+id/incomeFragment"
+        android:name="com.example.financeassistant.fragment.IncomeFragment"
+        android:label="fragment_income"
+        tools:layout="@layout/fragment_income">
+        <action
+            android:id="@+id/action_budgetFragment_to_calculatorFragment"
+            app:destination="@id/calculatorFragment" />
+        <action
+            android:id="@+id/action_budgetFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_incomeFragment_to_balanceSheetFragment"
+            app:destination="@id/balanceSheetFragment" />
+        <action
+            android:id="@+id/action_incomeFragment_to_expensesFragment"
+            app:destination="@id/expensesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.financeassistant.fragment.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_budgetFragment"
+            app:destination="@id/incomeFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_calculatorFragment"
+            app:destination="@id/calculatorFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/calculatorFragment"
+        android:name="com.example.financeassistant.fragment.CalculatorFragment"
+        android:label="fragment_calculator"
+        tools:layout="@layout/fragment_calculator" >
+        <action
+            android:id="@+id/action_calculatorFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_calculatorFragment_to_budgetFragment"
+            app:destination="@id/incomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/balanceSheetFragment"
+        android:name="com.example.financeassistant.fragment.BalanceSheetFragment"
+        android:label="fragment_balance_sheet"
+        tools:layout="@layout/fragment_balance_sheet" >
+        <action
+            android:id="@+id/action_balanceSheetFragment_to_expensesFragment"
+            app:destination="@id/expensesFragment" />
+        <action
+            android:id="@+id/action_balanceSheetFragment_to_incomeFragment"
+            app:destination="@id/incomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/expensesFragment"
+        android:name="com.example.financeassistant.fragment.ExpensesFragment"
+        android:label="fragment_expenses"
+        tools:layout="@layout/fragment_expenses" >
+        <action
+            android:id="@+id/action_expensesFragment_to_balanceSheetFragment"
+            app:destination="@id/balanceSheetFragment" />
+        <action
+            android:id="@+id/action_expensesFragment_to_incomeFragment"
+            app:destination="@id/incomeFragment" />
+    </fragment>
+</navigation>

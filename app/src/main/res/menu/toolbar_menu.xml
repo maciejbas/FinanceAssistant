@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/fsvSearch"
+        android:title="search"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/fsvOrder"
+        android:title="sort"
+        app:showAsAction="ifRoom">
+        <menu>
+            <group android:id="@+id/sortMenu" android:checkableBehavior="single">
+                <item
+                    android:id="@+id/sortIncrease"
+                    android:title="increasing"/>
+
+                <item
+                    android:id="@+id/sortDecrease"
+                    android:title="decreasing"/>
+
+                <item
+                    android:id="@+id/sortMArtist"
+                    android:title="artist"/>
+
+                <item
+                    android:id="@+id/sortAlbum"
+                    android:title="albums"/>
+
+                <item
+                    android:id="@+id/sortYear"
+                    android:title="year"/>
+
+                <item
+                    android:id="@+id/sortDate"
+                    android:title="date"/>
+
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/fsvGrid"
+        android:title="grid"
+        app:showAsAction="ifRoom">
+        <menu>
+            <group android:id="@+id/gridMenu" android:checkableBehavior="single">
+                <item
+                    android:id="@+id/gridOne"
+                    android:title="1"/>
+
+                <item
+                    android:id="@+id/gridTwo"
+                    android:title="2"/>
+
+                <item
+                    android:id="@+id/gridThree"
+                    android:title="3"/>
+
+                <item
+                    android:id="@+id/gridFour"
+                    android:title="4"/>
+            </group>
+        </menu>
+    </item>
+</menu>

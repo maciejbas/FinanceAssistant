@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dates_array">
+        <item>Today</item>
+        <item>Last week</item>
+        <item>Last 30 days</item>
+        <item>Last year</item>
+        <item>Specific range</item>
+    </string-array>
+</resources>
